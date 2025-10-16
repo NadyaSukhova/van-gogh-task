@@ -1,0 +1,65 @@
+let isPhoneScreen = false;
+let previousWidth = window.innerWidth;
+const toggleButton = document.querySelector(".toggle-nav");
+const buttonImage = toggleButton.querySelector("img");
+const navMenuPhone = document.querySelectorAll(".main-nav-phone");
+const hrPhone = document.querySelectorAll(".hr-phone");
+
+function toggleMenu() {
+  isPhoneScreen = !isPhoneScreen;
+
+  if (isPhoneScreen) {
+    buttonImage.src = "./images/Close.svg";
+    for (let nav of navMenuPhone) {
+      nav.classList.add("nav-open");
+      nav.classList.remove("nav-closed");
+    }
+    for (let hr of hrPhone) {
+      hr.classList.add("hr-open");
+      hr.classList.remove("hr-closed");
+    }
+  } else {
+    buttonImage.src = "./images/Open.svg";
+    for (let nav of navMenuPhone) {
+      nav.classList.add("nav-closed");
+      nav.classList.remove("nav-open");
+    }
+    for (let hr of hrPhone) {
+      hr.classList.add("hr-closed");
+      hr.classList.remove("hr-open");
+    }
+  }
+}
+
+function windowResize() {
+  if (window.innerWidth > 1160) {
+    isPhoneScreen = false;
+    for (let nav of navMenuPhone) {
+      nav.classList.add("nav-closed");
+      nav.classList.remove("nav-open");
+    }
+    for (let hr of hrPhone) {
+      hr.classList.add("hr-closed");
+      hr.classList.remove("hr-open");
+    }
+    buttonImage.src = "./images/Open.svg";
+  } else {
+    if (window.innerWidth < 1160 && previousWidth > 1160) {
+      isPhoneScreen = false;
+      for (let nav of navMenuPhone) {
+        nav.classList.add("nav-closed");
+        nav.classList.remove("nav-open");
+      }
+      for (let hr of hrPhone) {
+        hr.classList.add("hr-closed");
+        hr.classList.remove("hr-open");
+      }
+      buttonImage.src = "./images/Open.svg";
+    }
+  }
+  previousWidth = window.innerWidth;
+}
+
+// Назначение обработчиков событий
+toggleButton.addEventListener("click", toggleMenu);
+window.addEventListener("resize", windowResize);
