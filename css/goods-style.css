@@ -1,0 +1,244 @@
+.recommended-goods-h1 {
+    display: block;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 36px;
+    margin: 80px 240px 30px;
+    text-transform: uppercase;
+    transition: margin-top 0.5s ease;
+}
+
+.recommended-goods-h1.h1-up {
+    margin-top: 80px;
+}
+
+.recommended-goods-h1.h1-lower {
+    margin-top: calc(80px + 196px);
+}
+
+.recommended-goods {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 1440px;
+    margin: 80px 240px 30px;
+    gap: 30px;
+}
+
+.recommended-good {
+    display: flex;
+    flex-direction: row;
+    width: 705px;
+    border-radius: 8px;
+    border: 1px solid #DEDEDE;
+    box-sizing: border-box;
+}
+
+.good-img {
+    width: 220px;
+    background-color: #EEF3F8;
+    border-radius: 8px;
+}
+
+.good-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 345px;
+    margin: 31px 0 31px 30px;
+}
+
+.good-description {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    color: #272A33;
+    word-wrap: break-word;
+    height: 66px;
+    margin: 0;
+}
+
+.good-amount {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 425px;
+    height: 26px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #272A33;
+}
+
+.amount-img {
+    border-radius: 100px;
+    width: 14px;
+    height: 14px;
+    box-sizing: border-box;
+}
+
+.good-more {
+    width: 159px;
+    height: 46px;
+    background-color: #272A33;
+    color: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+}
+
+.good-more:hover {
+    background-color: #EE753E;
+}
+
+.good-more:disabled {
+    background: #272A33;
+    opacity: 0.2;
+}
+
+
+@media (max-width: 1440px) {
+
+    .recommended-goods,
+    .recommended-goods-h1 {
+        margin-left: 140px;
+        margin-right: 140px;
+        margin-bottom: 30px;
+    }
+
+    .recommended-goods {
+        margin-top: 80px;
+        width: 1160px;
+    }
+
+    .recommended-good {
+        width: 565px;
+    }
+
+    .recommended-goods-h1 {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1160px) {
+
+    .recommended-goods,
+    .recommended-goods-h1 {
+        margin-left: 196px;
+        margin-right: 196px;
+        margin-bottom: 30px;
+    }
+
+    .recommended-goods-h1 {
+        font-size: 30px;
+    }
+
+    .recommended-goods {
+        margin-top: 50px;
+        width: 768px;
+    }
+
+    .recommended-good {
+        width: 768px;
+    }
+
+    .recommended-goods-h1 {
+        margin-top: 0;
+    }
+
+    .recommended-goods-h1.h1-up {
+        margin-top: 50px;
+    }
+
+    .recommended-goods-h1.h1-lower {
+        margin-top: calc(50px + 196px);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .recommended-goods,
+    .recommended-goods-h1 {
+        margin-left: 96px;
+        margin-right: 96px;
+        margin-bottom: 30px;
+    }
+
+    .recommended-goods-h1 {
+        font-size: 20px;
+    }
+
+    .recommended-goods {
+        margin-top: 30px;
+        width: 576px;
+    }
+
+    .recommended-good {
+        width: 576px;
+    }
+
+    .recommended-goods-h1 {
+        margin-top: 0;
+    }
+
+    .recommended-goods-h1.h1-up {
+        margin-top: 50px;
+    }
+
+    .recommended-goods-h1.h1-lower {
+        margin-top: calc(50px + 196px);
+    }
+
+    .good-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .recommended-goods {
+        margin-top: 20px;
+        width: 360px;
+        gap: 20px;
+    }
+
+    .recommended-good {
+        width: 170px;
+        flex-direction: column;
+    }
+
+    .good-img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .good-content {
+        width: 170px;
+        margin: 10px;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .good-description {
+        width: 150px;
+        height: 100px;
+        font-size: 16px;
+    }
+
+    .good-more {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 391px) {
+    .recommended-goods {
+        margin: 20px 15px;
+        width: 360px;
+    }
+
+    .recommended-goods-h1 {
+        margin-left: 13px;
+    }
+}

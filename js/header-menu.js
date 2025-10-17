@@ -3,6 +3,9 @@ let previousWidth = window.innerWidth;
 const toggleButton = document.querySelector(".toggle-nav");
 const buttonImage = toggleButton.querySelector("img");
 const navMenuPhone = document.querySelectorAll(".main-nav-phone");
+const recommendedGoods = document.getElementsByClassName(
+  "recommended-goods-h1"
+)[0];
 const hrPhone = document.querySelectorAll(".hr-phone");
 
 function toggleMenu() {
@@ -18,6 +21,8 @@ function toggleMenu() {
       hr.classList.add("hr-open");
       hr.classList.remove("hr-closed");
     }
+    recommendedGoods.classList.add("h1-lower");
+    recommendedGoods.classList.remove("h1-up");
   } else {
     buttonImage.src = "./images/Open.svg";
     for (let nav of navMenuPhone) {
@@ -28,6 +33,8 @@ function toggleMenu() {
       hr.classList.add("hr-closed");
       hr.classList.remove("hr-open");
     }
+    recommendedGoods.classList.remove("h1-lower");
+    recommendedGoods.classList.add("h1-up");
   }
 }
 
