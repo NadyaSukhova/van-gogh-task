@@ -2,6 +2,7 @@ let isPhoneScreen = false;
 let previousWidth = window.innerWidth;
 const toggleButton = document.querySelector(".toggle-nav");
 const buttonImage = toggleButton.querySelector("img");
+const mainHeader = document.querySelector(".main-header");
 const navMenuPhone = document.querySelectorAll(".main-nav-phone");
 const recommendedGoods = document.getElementsByClassName(
   "recommended-goods-h1"
@@ -16,6 +17,7 @@ function toggleMenu() {
   isPhoneScreen = !isPhoneScreen;
 
   if (isPhoneScreen) {
+    mainHeader.classList.add("menu-open");
     buttonImage.src = "./images/Close.svg";
     toggleNavButton.setAttribute("aria-label", "Закрыть меню");
     for (let nav of navMenuPhone) {
@@ -29,6 +31,7 @@ function toggleMenu() {
     recommendedGoods.classList.add("h1-lower");
     recommendedGoods.classList.remove("h1-up");
   } else {
+    mainHeader.classList.remove('menu-open');
     buttonImage.src = "./images/Open.svg";
     toggleNavButton.setAttribute("aria-label", "Открыть меню");
     for (let nav of navMenuPhone) {
