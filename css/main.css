@@ -12,7 +12,6 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden;
 }
 
 .main-catalog {
@@ -36,4 +35,10 @@ body {
 .main-catalog:disabled {
     background: #272A33;
     opacity: 0.2;
+}
+
+@media (max-width: 1161px) {
+    html, body {
+        overflow-x: hidden;
+    }
 }

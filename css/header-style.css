@@ -98,7 +98,7 @@ body {
 }
 
 .main-nav-phone>.hr-phone:first-child {
-    width: 100vw;
+    width: 100%;
     margin-left: -196px;
 }
 
