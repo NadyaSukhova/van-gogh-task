@@ -74,9 +74,11 @@
 
 .amount-img {
     border-radius: 100px;
-    width: 14px;
-    height: 14px;
-    box-sizing: border-box;
+    padding: 5px 4px;
+    width: 6px;
+    height: 4px;
+    border: none;
+
 }
 
 .good-more {
