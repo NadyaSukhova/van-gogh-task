@@ -16,7 +16,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     padding: 21px 240px;
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -99,12 +99,14 @@ body {
 @media (max-width: 1441px) {
     .main-header {
         padding: 21px 140px;
+        width: 100%;
     }
 }
 
 @media (max-width: 1161px) {
     .main-header {
         padding: 20px 196px;
+        width: 100%;
     }
 
     .toggle-nav {
@@ -142,6 +144,7 @@ body {
 @media (max-width: 769px) {
     .main-header {
         padding: 20px 96px;
+        width: 100%;
     }
 
     .main-nav-phone > .hr-phone:first-child {
@@ -155,7 +158,8 @@ body {
 
 @media (max-width: 577px) {
     .main-header {
-        padding: 20px 106px;
+        padding: 20px calc(50% - 180px);
+        width: 100%;
     }
 
     .main-nav-phone > .hr-phone:first-child {
@@ -166,6 +170,7 @@ body {
 @media (max-width: 391px) {
     .main-header {
         padding: 16.82px 13px;
+        width: 100%;
     }
 
     .main-nav-phone > .hr-phone:first-child {

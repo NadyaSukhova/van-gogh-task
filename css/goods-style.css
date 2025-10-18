@@ -4,6 +4,7 @@
     font-weight: 700;
     font-size: 36px;
     margin: 80px 240px 30px;
+    width: calc(100% - 480px);
     text-transform: uppercase;
     transition: margin-top 0.5s ease;
 }
@@ -21,7 +22,8 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
-    width: 1440px;
+    width: calc(100% - 480px);
+    max-width: 1440px;
     margin: 80px 240px 30px;
     gap: 30px;
 }
@@ -29,7 +31,8 @@
 .recommended-good {
     display: flex;
     flex-direction: row;
-    width: 705px;
+    width: calc(50% - 15px);
+    max-width: 705px;
     border-radius: 8px;
     border: 1px solid #DEDEDE;
     box-sizing: border-box;
@@ -37,6 +40,7 @@
 
 .good-img {
     width: 220px;
+    height: auto;
     background-color: #EEF3F8;
     border-radius: 8px;
 }
@@ -46,6 +50,7 @@
     flex-direction: column;
     gap: 10px;
     width: 345px;
+    max-width: calc(100% - 250px);
     margin: 31px 0 31px 30px;
 }
 
@@ -108,15 +113,18 @@
         margin-left: 140px;
         margin-right: 140px;
         margin-bottom: 30px;
+        width: calc(100% - 280px);
     }
 
     .recommended-goods {
         margin-top: 80px;
-        width: 1160px;
+        width: calc(100% - 280px);
+        max-width: 1160px;
     }
 
     .recommended-good {
-        width: 565px;
+        width: calc(50% - 15px);
+        max-width: 565px;
     }
 
     .recommended-goods-h1 {
@@ -167,6 +175,8 @@
         margin-left: 96px;
         margin-right: 96px;
         margin-bottom: 30px;
+        width: calc(100% - 192px);
+        max-width: 576px;
     }
 
     .recommended-goods-h1 {
@@ -175,11 +185,12 @@
 
     .recommended-goods {
         margin-top: 30px;
-        width: 576px;
+        min-height: 220px;
     }
 
     .recommended-good {
-        width: 576px;
+        width: 100%;
+        max-width: 576px;
     }
 
     .recommended-goods-h1 {
@@ -201,23 +212,31 @@
 
 @media (max-width: 576px) {
     .recommended-goods {
-        margin-top: 20px;
-        width: 360px;
+        margin: 20px auto;
+        width: calc(100% - 30px);
+        max-width: 360px;
         gap: 20px;
     }
 
+    .recommended-goods-h1 {
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100% - 30px);
+        max-width: 360px;
+    }
+
     .recommended-good {
-        width: 170px;
+        width: calc(50% - 10px);
         flex-direction: column;
     }
 
     .good-img {
-        width: 170px;
+        max-width: 100%;
         height: 170px;
     }
 
     .good-content {
-        width: 170px;
+        max-width: calc(100% - 20px);
         margin: 10px;
         gap: 10px;
         font-size: 14px;
@@ -241,6 +260,8 @@
     }
 
     .recommended-goods-h1 {
-        margin-left: 13px;
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100% - 26px);
     }
 }

@@ -3,6 +3,7 @@
     font-size: 36px;
     text-transform: uppercase;
     margin: 4px 240px 30px;
+    width: fit-content;
 }
 
 .about-company {
@@ -95,7 +96,8 @@
 
 @media (max-width: 1441px) {
     .company-header {
-        margin: 80px 140px;
+        margin-top: 80px;
+        margin-left: 140px;
     }
 
     .company-pics {
@@ -112,6 +114,15 @@
         height: 129.8297882080078px;
 
     }
+
+    .company-pics {
+        row-gap: 26.45px;
+        column-gap: 24.04px;
+    }
+
+    .company-desciption {
+        width: 565px;
+    }
 }
 
 @media (max-width: 1161px) {
@@ -120,7 +131,8 @@
     }
 
     .company-pics {
-        width: 768.0001220703125px;
+        width: 100%;
+        max-width: 768.0001220703125px;
     }
 
     .about-company {
@@ -129,41 +141,68 @@
     }
 
     .company-pic-up {
-        width: 768px;
+        width: 100%;
+        max-width: 768px;
         height: 220.05105590820312px;
     }
 
     .company-pic-low {
-        width: 367.1148681640625px;
+        width: 100%;
+        max-width: 367.1148681640625px;
         height: 176.47659301757812px;
 
+    }
+
+    .company-pics {
+        row-gap: calc(768px-367.1148681640625px-367.1148681640625px);
+        column-gap: calc(902.2086791992188px-220.05105590820312px-176.47659301757812px);
+    }
+
+    .company-desciption {
+        width: 768px;
     }
 }
 
 @media (max-width: 769px) {
     .company-header {
-        margin: 50px 96px;
+        margin: 50px auto 30px;
+        max-width: 576px;
+        width: calc(100% - 192px);
     }
 
     .company-pics {
-        width: 576px;
+        max-width: 576px;
+        width: calc(100% - 192px);
     }
 
     .company-pic-up {
-        width: 575.9999389648438px;
+        width: 100%;
         height: 165.03822326660156px;
     }
 
     .company-pic-low {
-        width: 275.33612060546875px;
+        width: calc(50% - 12.255px);
+        max-width: 275.33612060546875px;
         height: 132.35739135742188px;
 
+    }
+
+    .company-pics {
+        row-gap: 26.96px;
+        column-gap: 24.51px;
+    }
+
+    .company-desciption {
+        max-width: 576px;
+        width: calc(100% - 192px);
     }
 }
 
 @media (max-width: 577px) {
     .company-header {
-        margin: 50px 108px;
+        margin: 50px auto;
+        width: calc(100% - 30px);
+        max-width: 360px;
     }
 
     .company-pics {
@@ -180,10 +219,21 @@
         height: 82.72335052490234px;
 
     }
+
+    .company-pics {
+        row-gap: 16.85px;
+        column-gap: 15.32px;
+    }
+
+    .company-desciption {
+        width: 360px;
+    }
 }
 
 @media (max-width: 391px) {
     .company-header {
-        margin: 50px 15px;
+        margin: 50px auto;
+        width: calc(100% - 30px);
+        max-width: 360px;
     }
 }

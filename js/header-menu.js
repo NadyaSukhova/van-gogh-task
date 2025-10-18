@@ -77,6 +77,5 @@ function windowResize() {
   previousWidth = window.innerWidth;
 }
 
-// Назначение обработчиков событий
 toggleButton.addEventListener("click", toggleMenu);
 window.addEventListener("resize", windowResize);
