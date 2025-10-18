@@ -7,12 +7,17 @@ const recommendedGoods = document.getElementsByClassName(
   "recommended-goods-h1"
 )[0];
 const hrPhone = document.querySelectorAll(".hr-phone");
+const toggleNavButton = document.querySelector(".toggle-nav");
+
+const desktopMenu = document.querySelector(".main-nav");
+const phoneMenu = document.querySelector(".main-nav-phone");
 
 function toggleMenu() {
   isPhoneScreen = !isPhoneScreen;
 
   if (isPhoneScreen) {
     buttonImage.src = "./images/Close.svg";
+    toggleNavButton.setAttribute("aria-label", "Закрыть меню");
     for (let nav of navMenuPhone) {
       nav.classList.add("nav-open");
       nav.classList.remove("nav-closed");
@@ -25,6 +30,7 @@ function toggleMenu() {
     recommendedGoods.classList.remove("h1-up");
   } else {
     buttonImage.src = "./images/Open.svg";
+    toggleNavButton.setAttribute("aria-label", "Открыть меню");
     for (let nav of navMenuPhone) {
       nav.classList.add("nav-closed");
       nav.classList.remove("nav-open");
@@ -40,6 +46,8 @@ function toggleMenu() {
 
 function windowResize() {
   if (window.innerWidth > 1160) {
+    navMenuPhone.setAttribute("aria-hidden", "true");
+    desktopNav.setAttribute("aria-hidden", "false");
     isPhoneScreen = false;
     for (let nav of navMenuPhone) {
       nav.classList.add("nav-closed");
@@ -51,6 +59,8 @@ function windowResize() {
     }
     buttonImage.src = "./images/Open.svg";
   } else {
+    navMenuPhone.setAttribute("aria-hidden", "false");
+    desktopNav.setAttribute("aria-hidden", "true");
     if (window.innerWidth < 1160 && previousWidth > 1160) {
       isPhoneScreen = false;
       for (let nav of navMenuPhone) {

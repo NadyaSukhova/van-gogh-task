@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/header-style.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/goods-style.css">
+    <link rel="stylesheet" href="css/about-company.css">
     <link rel="icon" href="./images/Logo.svg" type="image/x-icon">
 </head>
 
@@ -17,7 +18,7 @@
             <img src="./images/Company.svg" alt="Логотип компании" class="header-logo">
         </a>
         <button class="toggle-nav" aria-label="Открыть меню">
-            <img src="./images/Open.svg">
+            <img src="./images/Open.svg" alt="">
         </button>
         <nav aria-label="Основная навигация" class="main-nav">
             <ul class="header-buttons">
@@ -28,7 +29,7 @@
                 <li><a href="/contacts">Контакты</a></li>
             </ul>
         </nav>
-        <nav aria-label="Основная навигация" class="main-nav-phone nav-closed">
+        <nav aria-label="Мобильная навигация" class="main-nav-phone nav-closed">
             <hr class="hr-phone hr-closed">
             <ul class="header-buttons-phone">
                 <li><a href="/">Главная</a></li>
@@ -45,8 +46,41 @@
         </nav>
     </header>
     <main>
-        <h1 class="recommended-goods-h1">Рекомендуемое оборудование</h1>
-        <section class="recommended-goods">
+        <section class="recommended-goods-section">
+        </section>
+        <a href="/catalog" class="main-catalog">Перейти в каталог</a>
+        <section class="about-company-section">
+            <h2 class="company-header">О компании</h2>
+            <div class="about-company">
+                <div class="company-pics">
+                    <div class="company-pic-up">
+                        <img src="./images/company-1.png" alt="Картинка лифта" />
+                    </div>
+                    <div class="company-pic-low">
+                        <img src="./images/company-2.png" alt="Картинка двух лифтов" />
+                    </div>
+                    <div class="company-pic-low">
+                        <img src="./images/company-3.png" alt="Картинка лифт снизу" />
+                    </div>
+                </div>
+                <div class="company-desciption">
+                    <p>Компания «SPARTSPRO» специализируется на поставках лифтового
+                        оборудования,
+                        комплектующих и запчастей для лифтов и эскалаторов ведущих мировых и российских производителей.
+                    </p>
+                    <ul class="company-features">
+                        <li>Гарантия качества – работаем только с проверенными производителями.</li>
+                        <li>Собственный склад – более 30 000 наименований в наличии для оперативных отгрузок.</li>
+                        <li>Соблюдение сроков – приоритет компании: быстрая обработка заказов и доставка без задержек.
+                        </li>
+                    </ul>
+                    <p>Мы обеспечиваем бесперебойные поставки для ваших проектов. Оставьте заявку – и получите
+                        коммерческое
+                        предложение в кратчайшие сроки!
+                    </p>
+                    <a href="/company" class="more-company">Подробнее</a>
+                </div>
+            </div>
         </section>
     </main>
 </body>
